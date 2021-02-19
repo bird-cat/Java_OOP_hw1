@@ -71,7 +71,9 @@ public class Old_maid {
     private Card[] removePairs(Card[] cardList) {
         int i = 0, j = 0;
         while (j < cardList.length) {
-            if (j < cardList.length - 1 && cardList[j].getRank().equals(cardList[j + 1].getRank()))
+            if (j < cardList.length - 1 &&
+                !cardList[j].getRank().equals("0") &&
+                cardList[j].getRank().equals(cardList[j + 1].getRank()))
                 j += 2;
             else {
                 cardList[i++] = cardList[j];
